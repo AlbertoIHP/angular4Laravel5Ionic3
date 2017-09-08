@@ -1,0 +1,20 @@
+	  <table>
+		<thead>
+		  <tr>
+			  <th>Modelo</th>
+			  <th>Año</th>
+
+		  </tr>
+		</thead>
+
+		<tbody>
+
+			<tr *ngFor="let p of cars.data">
+				<td>{{ p.model }}</td>
+				<td>{{ p.year }}</td>
+			</tr>
+
+		</tbody>
+	  </table>
+
+		<p><a [routerLink]="['/login']">Logout</a></p>

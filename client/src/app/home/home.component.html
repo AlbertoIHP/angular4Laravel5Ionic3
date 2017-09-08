@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+	  <table>
+		<thead>
+		  <tr>
+			  <th>Username</th>
+			  <th>Password</th>
+
+		  </tr>
+		</thead>
+
+		<tbody>
+
+			<tr *ngFor="let p of users.data">
+				<td>{{ p.email }}</td>
+				<td>{{ p.password }}</td>
+			</tr>
+
+		</tbody>
+	  </table>
+
+	  	<p><a [routerLink]="['/login']">Logout</a></p>
