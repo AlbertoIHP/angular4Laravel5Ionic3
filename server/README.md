@@ -1,7 +1,9 @@
 # Servidor API RESTful con JWT.auth - Cors - LGenerator en Laravel 5
 
 ## Instalacion
+```
 composer install
+```
 
 ## Crear fichero .env utilizando .env
 ## Agregar a .env la base de datos, usuario y contraseña donde se leeran los esquemas 
@@ -53,7 +55,12 @@ php artisan serve
 ```
 
 ## Ingresar a la pagina
+```
 localhost:8000
+```
+
 
 ## Ingresar a la api
+```
 localhost:8000/api/v1/users
+```
