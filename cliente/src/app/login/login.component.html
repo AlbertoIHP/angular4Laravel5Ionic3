@@ -1,28 +1,34 @@
 
-	<div >
-		Username: test<br/>
-		Password: test
-	</div>
+	<h2>Inicio de Sesion</h2>
 
-
-	<h2>Login</h2>
-
-
+	<!-- En caso de hacer submit, se valida el formulario y se ejecuta el login
+		Ademas se define f con la directiva ngForm y se deja para el funcionamiento global
+	-->
 	<form (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
 
 		<div [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+
 			<label for="username">Email</label>
 
+			<!--Se establece el 2wdb para username creado en el modelo, y ademas se crea una variable a la directiva ngmodel para que quede username usable para el resto del DOM -->
 			<input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
-			
+
+
+			<!--Verifica si es que se sube el formulario y el usuario no es valido, nos avisa entonces que es requerido -->
 			<div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
 		</div>
+
+
 
 		<div [ngClass]="{ 'has-error': f.submitted && !password.valid }">
 			<label for="password">Password</label>
 
+
+			<!-- Hace lo mismo que con usuario asignando el 2wdb a la informacion creada en el modelo, pero ademas deja password a la directiva ngmodel de manera que el dom pueda manegarla-->
 			<input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
 
+
+			<!--En caso de que se suba el formularion (f.submitted) y la contraseña no sea valida -->
 			<div *ngIf="f.submitted && !password.valid" >Password is required</div>
 		</div>
 
@@ -30,8 +36,4 @@
 			<button [disabled]="loading" class="btn btn-primary">Login</button>
 		</div>
 
-
-		<div *ngIf="error">{{error}}</div>
-
 	</form>
-

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-
+import { MaterializeModule } from "angular2-materialize";
 
 //Archivo de ruteo
 import { AppRoutingModule } from './app-routing.module';
@@ -28,14 +28,15 @@ import { CarService } from './services/car.service';
 		AppComponent,
 		LoginComponent,
 		HomeComponent,
-		AutosComponent,
+		AutosComponent
 	],
 	//Modulos declarados
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
 		FormsModule,
-		HttpModule
+		HttpModule,
+		MaterializeModule,
 	],
 	//Servicios declarados
 	providers: [
