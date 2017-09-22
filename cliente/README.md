@@ -9,4 +9,4 @@ ng serve
 
 
 ## Ir a la aplicacion
-localhost:3200
+localhost:4200
